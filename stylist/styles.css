@@ -1,0 +1,53 @@
+img{
+    max-width: 100%;
+    display: block;
+}
+.media{
+    border: 2px dotted rgb(96 139 168);
+    display: flex;
+    align-items: flex-start;
+}
+.media .content{
+    flex: 3;
+    padding: 10px;
+}
+/*
+    .image class was to control both columns. .media .content has a flex 1 at first.
+    since you add the .image class, you can adjust the flex growth of the other class.
+*/
+.image{
+    flex: 1
+}
+.image, .content{
+    border: 2px solid rgb(96 139 168);
+}
+/*
+    .flipped class was added to control the direction
+*/
+.flipped{
+    flex-direction: row-reverse;
+}
+*{
+    font: 1.1em sans-serif;
+}
+.wrapper{
+    display: flex;
+    border: 1px solid rgb(96 139 168);
+}
+.wrapper > *{
+    padding: 10px;
+    border: none;
+    color: #fff;
+}
+.wrapper > input[type="text"]{
+    background-color: rgba(96, 139, 168, 0.5);
+    border-right: 1px solid rgb(96 139 168);
+    flex: 1 1 auto;
+}
+.wrapper > input[type="submit"]{
+    background-color: rgb(96 139 168);
+    color: #fff;
+}
+.wrapper label{
+    background-color: #666;
+}
